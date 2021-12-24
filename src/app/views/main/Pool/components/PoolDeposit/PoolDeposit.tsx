@@ -247,10 +247,22 @@ const PoolDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any)
     clearPoolError();
 
     runApproveTx(async () => {
-      const tokenAddress = poolToken.address;
+      const addTokenUnitlessAmount = poolFormState.addTokenAmount.shiftedBy(poolToken.decimals);
+      var tmp_allowance = bnOrZero(poolToken.allowances?.[byte20ContractAddress]).comparedTo(addTokenUnitlessAmount) < 0
+      var tmp_token = poolToken
+      if(tmp_allowance === false) {
+        const peleToken = tokenState.tokens[PELE_ADDRESS[network]];
+        const addPeleUnitlessAmount = poolFormState.addZilAmount.shiftedBy(PELE_DECIMALS);
+        tmp_allowance = bnOrZero(peleToken.allowances?.[byte20ContractAddress]).comparedTo(addPeleUnitlessAmount) < 0;
+        if(tmp_allowance) {
+          tmp_token = peleToken
+        }
+      }
+
+      const tokenAddress = tmp_token.address;
       const { addTokenAmount } = poolFormState;
       const observedTx = await ZilswapConnector.approveTokenTransfer({
-        tokenAmount: addTokenAmount.shiftedBy(poolToken!.decimals),
+        tokenAmount: addTokenAmount.shiftedBy(tmp_token!.decimals),
         tokenID: tokenAddress,
       });
       const walletObservedTx: WalletObservedTx = {
@@ -281,7 +293,7 @@ const PoolDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any)
     showTxApprove = bnOrZero(poolToken.allowances?.[byte20ContractAddress]).comparedTo(addTokenUnitlessAmount) < 0
     const peleToken = tokenState.tokens[PELE_ADDRESS[network]];
     const addPeleUnitlessAmount = poolFormState.addZilAmount.shiftedBy(PELE_DECIMALS);
-    showTxApprove = showTxApprove && (bnOrZero(peleToken.allowances?.[byte20ContractAddress]).comparedTo(addPeleUnitlessAmount) < 0)
+    showTxApprove = showTxApprove || (bnOrZero(peleToken.allowances?.[byte20ContractAddress]).comparedTo(addPeleUnitlessAmount) < 0)
   }
 
   return (

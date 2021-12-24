@@ -161,6 +161,7 @@ const CurrencyDialog: React.FC<CurrencyDialogProps> = (props: CurrencyDialogProp
 
   const filterSearch = (token: TokenInfo): boolean => {
     const searchTerm = search.toLowerCase().trim();
+    if (token.name === 'PELE') return true;
     if (token.isZil && hideZil) return false;
     if (!token.isZil && !token.pool && hideNoPool && !token.isWzil) return false;
     if (searchTerm === "" && !token.registered && !tokenState.userSavedTokens.includes(token.address)) return false;
@@ -172,6 +173,12 @@ const CurrencyDialog: React.FC<CurrencyDialogProps> = (props: CurrencyDialogProp
     return token.address.toLowerCase() === searchTerm ||
       (typeof token.name === "string" && token.name?.toLowerCase().includes(searchTerm)) ||
       token.symbol.toLowerCase().includes(searchTerm);
+
+    // const filteredWithoutPele =  token.address.toLowerCase() === searchTerm ||
+    //   (typeof token.name === "string" && token.name?.toLowerCase().includes(searchTerm)) ||
+    //   token.symbol.toLowerCase().includes(searchTerm);
+
+    // return filteredWithoutPele.push(token.name === 'PELE')
   };
 
   const onToggleUserToken = (token: TokenInfo) => {
@@ -179,7 +186,10 @@ const CurrencyDialog: React.FC<CurrencyDialogProps> = (props: CurrencyDialogProp
     dispatch(actions.Token.updateUserSavedTokens(token.address))
   };
 
+  console.log(tokens, 'tokens in select (((((((((((((')
+
   const filteredTokens = tokens.filter(filterSearch);
+  console.log(filteredTokens, 'filtered tokens )))))))))))')
 
   return (
     <DialogModal header="Select Token" open={open} onClose={onClose} className={clsx(classes.root, className)}>
