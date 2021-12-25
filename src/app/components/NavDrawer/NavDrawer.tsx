@@ -1,23 +1,9 @@
-import React, { useMemo } from "react";
-import { Box, Button, Drawer, DrawerProps, List, useMediaQuery } from "@material-ui/core";
+import React from "react";
+import { Box, DrawerProps, List } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import BigNumber from "bignumber.js";
-import cls from "classnames";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { ZWAP_TOKEN_CONTRACT } from "core/zilswap/constants";
-import { CurrencyLogo, Text } from "app/components";
-import { actions } from "app/store";
-import { RootState, TokenState } from "app/store/types";
 import { AppTheme } from "app/theme/types";
-import { useClaimEnabled, useNetwork, useValueCalculators } from "app/utils";
-import { BIG_ONE, BIG_ZERO } from "app/utils/constants";
-import NetworkToggle from "../NetworkToggle";
-import SocialLinkGroup from "../SocialLinkGroup";
-import ThemeSwitch from "../ThemeSwitch";
-import { Brand } from "../TopBar/components";
+import { useClaimEnabled } from "app/utils";
 import { NavigationContent } from "./components";
-import { ReactComponent as Logo } from "./logo2.svg";
 import navigationConfig from "./navigationConfig";
 
 const useStyles = makeStyles((theme: AppTheme) => ({
@@ -35,16 +21,6 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   content: {
     flex: 1,
     overflowY: "auto",
-    // "&::-webkit-scrollbar": {
-    //   width: "0.5rem",
-    // },
-    // "&::-webkit-scrollbar-thumb": {
-    //   backgroundColor: `rgba${hexToRGBA(
-    //     theme.palette.type === "dark" ? "#DEFFFF" : "#003340",
-    //     1
-    //   )}`,
-    //   borderRadius: 12,
-    // },
   },
   header: {
     display: "flex",
@@ -149,129 +125,27 @@ const useStyles = makeStyles((theme: AppTheme) => ({
 }));
 
 const NavDrawer: React.FC<DrawerProps> = (props: any) => {
-  const { children, className, onClose, ...rest } = props;
+  const { onClose } = props;
   const claimEnabled = useClaimEnabled();
   const classes = useStyles();
-  const valueCalculators = useValueCalculators();
-  const dispatch = useDispatch();
-  const tokenState = useSelector<RootState, TokenState>((state) => state.token);
-  const navDrawerExpanded = useSelector<RootState, boolean>(
-    (state) => state.layout.expandNavDrawer
-  );
-  const network = useNetwork();
-  const isXs = useMediaQuery((theme: AppTheme) => theme.breakpoints.down("xs"));
-
-  const zapTokenValue: BigNumber = useMemo(() => {
-    const zapContractAddr = ZWAP_TOKEN_CONTRACT[network] ?? "";
-    const zapToken = tokenState.tokens[zapContractAddr];
-    if (!zapToken) return BIG_ZERO;
-
-    return valueCalculators
-      .amount(tokenState.prices, zapToken, BIG_ONE)
-      .shiftedBy(zapToken.decimals);
-  }, [network, tokenState.prices, tokenState.tokens, valueCalculators]);
-
-  const zwapAddress = ZWAP_TOKEN_CONTRACT[network];
-
-  const showDrawer = !!isXs || !!navDrawerExpanded;
-
-  const expandNavDrawer = () => {
-    dispatch(actions.Layout.toggleExpandNavDrawer("open"));
-  };
-
-  const closeNavDrawer = () => {
-    dispatch(actions.Layout.toggleExpandNavDrawer("close"));
-  };
 
   return (
-    <Drawer
-      PaperProps={{
-        className: cls(classes.paper, {
-          [classes.hoverEffect]: !isXs,
-          [classes.box]: !!navDrawerExpanded,
-        }),
-      }}
-      onClose={() => {
-        onClose();
-        closeNavDrawer();
-      }}
-      {...rest}
-      className={cls(classes.root, className)}
-      onMouseEnter={() => expandNavDrawer()}
-      onMouseLeave={() => closeNavDrawer()}
-      variant={!isXs ? "permanent" : ""}
-      transitionDuration={1}
-      onClick={() => expandNavDrawer()}
-    >
-      <Box
-        className={cls(classes.drawerHeader, {
-          [classes.boxCompact]: !showDrawer,
-        })}
-      >
-        <Button
-          component={Link}
-          to="/"
-          className={classes.brandButton}
-          disableRipple
-        >
-          {showDrawer ? <Brand /> : <Logo />}
-        </Button>
-      </Box>
-      <Box className={classes.content}>
-        {navigationConfig.map((navigation, listIndex) => (
-          <List key={listIndex}>
-            {navigation.pages
-              .filter((navigation) => navigation.show || claimEnabled)
-              .map((page, index) => (
-                <NavigationContent
-                  onClose={onClose}
-                  key={index}
-                  navigation={page}
-                  showDrawer={showDrawer}
-                />
-              ))}
-          </List>
-        ))}
-      </Box>
-      <Box
-        className={cls(classes.footer, {
-          [classes.footerBoxCompact]: !showDrawer,
-        })}
-      >
-        <Box className={showDrawer ? classes.footerBox : classes.footerCompact}>
-          {/* ZWAP Price */}
-          <Box
-            className={showDrawer ? classes.footerBox : classes.footerCompact}
-          >
-            <CurrencyLogo
-              className={classes.currencyLogo}
-              currency="ZWAP"
-              address={zwapAddress}
-            />
-            <Text
-              variant="h6"
-              className={cls(classes.price, {
-                [classes.compactPrice]: !showDrawer,
-              })}
-            >
-              &nbsp;$ {zapTokenValue.toFormat(2)}
-            </Text>
-          </Box>
-          <SocialLinkGroup
-            className={!showDrawer ? classes.socialCompact : ""}
-            compact={!showDrawer}
-          />
-        </Box>
-        <Box className={showDrawer ? classes.footerBox : classes.footerCompact}>
-          <ThemeSwitch
-            className={!showDrawer ? classes.compactTheme : ""}
-            compact={!showDrawer}
-            forceDark
-          />
-          <NetworkToggle compact={!showDrawer} />
-        </Box>
-      </Box>
-    </Drawer>
+    <Box className={classes.content}>
+      {navigationConfig.map((navigation, listIndex) => (
+        <List key={listIndex}>
+          {navigation.pages
+            .filter((navigation) => navigation.show || claimEnabled)
+            .map((page, index) => (
+              <NavigationContent
+                onClose={onClose}
+                key={index}
+                navigation={page}
+                showDrawer={true}
+              />
+            ))}
+        </List>
+      ))}
+    </Box>
   );
 };
 

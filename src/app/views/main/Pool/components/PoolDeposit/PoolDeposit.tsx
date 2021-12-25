@@ -309,7 +309,7 @@ const PoolDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any)
           onEditorBlur={onDoneEditing}
           onAmountChange={onTokenChange}
           onCurrencyChange={onPoolChange}
-          dialogOpts={{ hideZil: true }} />
+          dialogOpts={{ hideZil: false, hidePele: true }} />
 
         <Box display="flex" justifyContent="flex-end">
           <ProportionSelect

@@ -35,6 +35,10 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   root: {},
   listItem: {
     padding: 0,
+    border: '1px solid #29475A',
+    borderRadius: 12,
+    width: 140,
+    marginLeft: 20,
   },
   buttonLeaf: {
     padding: theme.spacing(2, 3),

@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
   brandBox: {
     [theme.breakpoints.up("sm")]: {
-      paddingLeft: theme.spacing(16),
+      paddingLeft: theme.spacing(4),
     },
     "& svg": {
       height: 24,

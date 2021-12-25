@@ -355,7 +355,6 @@ const CurrencyInput: React.FC<CurrencyInputProps> = (
         }
       />
       {children}
-      {console.log(tokenList, 'tokenlist888888888888888888888888')}
       <CurrencyDialog
         {...dialogOpts}
         token={token}
