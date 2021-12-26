@@ -656,7 +656,6 @@ const Swap: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any) => {
             onEditorBlur={onDoneEditing}
             onAmountChange={onInAmountChange}
             onCurrencyChange={onInCurrencyChange} />
-            {console.log(inToken, 'intoken input *****************')}
           <Box display="flex" justifyContent="flex-end">
             <ProportionSelect size="small" className={classes.proportionSelect} onSelectProp={onPercentage} />
           </Box>

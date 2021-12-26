@@ -207,8 +207,8 @@ const PoolDeposit: React.FC<React.HTMLAttributes<HTMLDivElement>> = (props: any)
         throw new Error(`Insufficient ZIL balance.`)
       }
 
-      if (addZilAmount.lt(10)) {
-        throw new Error('Minimum contribution is 10 PELEs.')
+      if (addZilAmount.lt(5000)) {
+        throw new Error('Minimum contribution is 5000 PELEs.')
       }
 
       if (zilBalance.minus(addZilAmount).lt(5)) {
