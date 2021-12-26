@@ -162,11 +162,13 @@ const CurrencyDialog: React.FC<CurrencyDialogProps> = (props: CurrencyDialogProp
 
   const filterSearch = (token: TokenInfo): boolean => {
     const searchTerm = search.toLowerCase().trim();
+    
     if (token.name === 'PELE' && hidePele) {
       return false;
-    } else if (token.name === 'PELE') {
+    } else if (token.name === 'PELE' && token.decimals === 0) {
       return true;
     }
+    if(token.decimals !== 0) return false;
     if (token.isZil && hideZil) return false;
     if (!token.isZil && !token.pool && hideNoPool && !token.isWzil) return false;
     if (searchTerm === "" && !token.registered && !tokenState.userSavedTokens.includes(token.address)) return false;
@@ -187,6 +189,7 @@ const CurrencyDialog: React.FC<CurrencyDialogProps> = (props: CurrencyDialogProp
 
   const filteredTokens = tokens.filter(filterSearch);
   const first = "PELE";
+  console.log(filteredTokens, 'filtered tekens 09000000000000000000')
   filteredTokens.sort(function(x, y) {return x.name === first ? -1 : y.name === first ? 1 : 0;});
 
   return (
