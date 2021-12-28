@@ -13534,6 +13534,17 @@ pbkdf2@^3.0.16, pbkdf2@^3.0.17, pbkdf2@^3.0.3, pbkdf2@^3.0.9, pbkdf2@^3.1.1:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+"peleswap-sdk@git+https://github.com/sceptre520/peleswap-sdk.git":
+  version "0.0.1"
+  resolved "git+https://github.com/sceptre520/peleswap-sdk.git#5902f68270c8aa4eb442334b363f06871a00af71"
+  dependencies:
+    "@zilliqa-js/zilliqa" "^2.2.0"
+    async-mutex "^0.2.2"
+    bignumber.js "^9.0.0"
+    bn.js "^5.1.1"
+    isomorphic-fetch "^3.0.0"
+    tslib "^1.11.2"
+
 penpal@3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/penpal/-/penpal-3.0.7.tgz#d252711ed93b30f1d867eb82342785b3a95f5f75"

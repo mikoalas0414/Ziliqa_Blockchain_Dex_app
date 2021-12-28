@@ -165,7 +165,7 @@ const CurrencyDialog: React.FC<CurrencyDialogProps> = (props: CurrencyDialogProp
     
     if (token.name === 'PELE' && hidePele) {
       return false;
-    } else if (token.name === 'PELE' && token.decimals === 0) {
+    } else if (token.name === 'PELE') {
       return true;
     }
     if(token.decimals !== 0) return false;
