@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       padding: '6px 7px',
     },
   },
+  max: {
+    fontSize: 9,
+  },
 }));
 
 const ProportionSelect: React.FC<ProportionSelectProps> = (props: ProportionSelectProps) => {
@@ -37,16 +40,16 @@ const ProportionSelect: React.FC<ProportionSelectProps> = (props: ProportionSele
   return (
     <ToggleButtonGroup exclusive {...rest} className={cls(classes.root, className)} value={currentSelection} onChange={(event, newSelection) => {setCurrentSelection(newSelection)}}>
       <ToggleButton value="0.25" onClick={() => onSelect(0.25)} className={classes.percentageButton}>
-        <Typography>25%</Typography>
+        <Typography className={classes.max}>25%</Typography>
       </ToggleButton>
       <ToggleButton value="0.5" onClick={() => onSelect(0.5)} className={classes.percentageButton}>
-        <Typography>50%</Typography>
+        <Typography className={classes.max}>50%</Typography>
       </ToggleButton>
       <ToggleButton value="0.75" onClick={() => onSelect(0.75)} className={classes.percentageButton}>
-        <Typography>75%</Typography>
+        <Typography className={classes.max}>75%</Typography>
       </ToggleButton>
       <ToggleButton value="1" onClick={() => onSelect(1)} className={classes.percentageButton}>
-        <Typography>MAX</Typography>
+        <Typography className={classes.max}>MAX</Typography>
       </ToggleButton>
     </ToggleButtonGroup>
   );

@@ -45,7 +45,7 @@ const typography = (palette) => ({
   },
   body1: {
     fontFamily: "ConthraxSb-Regular",
-    fontSize: "12px",
+    fontSize: "11px",
     lineHeight: "14px",
     fontWeight: 600,
     letterSpacing: 0,

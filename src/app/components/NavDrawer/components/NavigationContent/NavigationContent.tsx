@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     color: theme.palette.text?.primary,
     alignItems: "flex-end",
     height: 48,
-    fontFamily: "ConthraxHv-Regular",
+    fontFamily: "ConthraxSb-Regular",
   },
   buttonLeafActive: {
     boxShadow:

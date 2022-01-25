@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     },
   },
   card: {
-    maxWidth: 488,
+    maxWidth: 548,
     margin: "0 auto",
     background:
       theme.palette.type === "dark"

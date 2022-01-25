@@ -128,6 +128,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#FFFFFF",
     fontSize: 24,
     fontFamily: "ConthraxHv-Regular",
+    textShadow: '0px 0px 3px rgba(59,223,231,0.36)',
   },
   logoContainer: {
     display: "flex",

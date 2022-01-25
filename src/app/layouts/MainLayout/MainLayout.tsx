@@ -33,6 +33,17 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       paddingLeft: theme.spacing(0),
     },
   },
+  foot: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    margin: "20px auto",
+    fontFamily: "ConthraxLt-Regular",
+    letterSpacing: "1px",
+    color: "#fff",
+    position: "fixed",
+    bottom: "20px",
+  },
 }));
 
 const MainLayout: React.FC<React.HTMLAttributes<HTMLDivElement>> = (
@@ -85,6 +96,7 @@ const MainLayout: React.FC<React.HTMLAttributes<HTMLDivElement>> = (
         <Suspense fallback={<LinearProgress />}>
           {renderRoutes(route.routes)}
         </Suspense>
+        <div className={classes.foot}>This is but a humble and grateful fork of <a href="https://github.com/Switcheo/zilswap-webapp" target="new">&nbsp;Zilswap</a>.</div>
       </main>
       <Hidden smUp>
         <ConnectWalletButton />

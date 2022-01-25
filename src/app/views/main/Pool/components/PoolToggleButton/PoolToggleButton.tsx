@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   tab: {
     borderRadius: 12,
-    width: 90,
+    width: 110,
     padding: theme.spacing(1.5, 4),
     [theme.breakpoints.down("xs")]: {
       width: 76,
