@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     borderRadius: 6,
     color: '#6BE1FF',
     background: 'rgba(107, 225, 255, 0.2)',
-    fontFamily: "Avenir Next",
+    fontFamily: "conthrax",
     fontWeight: 700,
     textTransform: 'uppercase',
   },

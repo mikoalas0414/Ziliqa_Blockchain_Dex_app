@@ -1,7 +1,16 @@
 import React, { Fragment, useMemo } from "react";
 import {
-  AppBar, Box, Button, Hidden, IconButton, Link,
-  Toolbar, useMediaQuery, AppBarProps, Typography, Grid
+  AppBar,
+  Box,
+  Button,
+  Hidden,
+  IconButton,
+  Link,
+  Toolbar,
+  useMediaQuery,
+  AppBarProps,
+  Typography,
+  Grid,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import cls from "classnames";
@@ -20,6 +29,9 @@ import { ReactComponent as SwapLogo } from "./assets/swap.svg";
 import { ReactComponent as PoolLogo } from "./assets/pool.svg";
 import { ReactComponent as ZilBridgeLogo } from "./assets/zilbridge.svg";
 import { ReactComponent as ZiloLogo } from "./assets/zilo.svg";
+import { local } from "web3modal";
+import { format } from "path";
+import { formatters } from "validate.js";
 
 interface Props extends TopBarProps, AppBarProps {
   onToggleTabDrawer?: (override?: boolean) => void;
@@ -82,6 +94,10 @@ const useStyles = makeStyles((theme) => ({
     "& svg": {
       height: 24,
     },
+    "&:hover": {
+      textDecoration: "none",
+    },
+    cursor: "pointer",
   },
   menuIcon: {
     paddingRight: theme.spacing(2),
@@ -89,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
   navLinkBox: {
     display: "flex",
     alignItems: "center",
-    marginLeft: theme.spacing(2)
+    marginLeft: theme.spacing(2),
   },
   navLinkButton: {
     "&:hover": {
@@ -108,15 +124,36 @@ const useStyles = makeStyles((theme) => ({
     color: "#DEFFFF",
     whiteSpace: "nowrap",
   },
+  logoLetter: {
+    color: "#FFFFFF",
+    fontSize: 24,
+    fontFamily: "ConthraxHv-Regular",
+  },
+  logoContainer: {
+    display: "flex",
+    justifyContent: "start",
+    alignItems: "center",
+    gap: 15,
+    "&>svg": {
+      height: 25,
+    },
+  },
 }));
 
-const TopBar: React.FC<Props> = (
-  props: Props
-) => {
-  const { children, className, onToggleDrawer, onToggleTabDrawer, currentPath, ...rest } = props;
+const TopBar: React.FC<Props> = (props: Props) => {
+  const {
+    children,
+    className,
+    onToggleDrawer,
+    onToggleTabDrawer,
+    currentPath,
+    ...rest
+  } = props;
   const classes = useStyles();
   const isXs = useMediaQuery((theme: AppTheme) => theme.breakpoints.down("xs"));
-  const walletState = useSelector<RootState, WalletState>(state => state.wallet);
+  const walletState = useSelector<RootState, WalletState>(
+    (state) => state.wallet
+  );
   const location = useLocation();
   const history = useHistory();
 
@@ -159,41 +196,54 @@ const TopBar: React.FC<Props> = (
           <Fragment>
             <Box flex={1}>
               <div className={classes.drawerHeader}>
-                <IconButton onClick={() => onToggleDrawer()}>
+                <div className={classes.logoContainer}>
+                  {/* <IconButton onClick={() => onToggleDrawer()}> */}
                   <Logo />
-                </IconButton>
+                  <span className={classes.logoLetter}>PFTswap</span>
+                  {/* </IconButton> */}
+                </div>
               </div>
             </Box>
-            <Box display="flex" justifyContent="center">
+            {/* <Box display="flex" justifyContent="center">
               <Button
                 component={RouterLink}
                 to="/"
                 className={classes.brandButton}
                 disableRipple
               >
-                {renderLogo}
+                <Logo />
               </Button>
-            </Box>
+            </Box> */}
           </Fragment>
         ) : (
           <Grid container>
-            <Link onClick={onClickLogo} className={classes.brandBox}>{renderLogo}</Link>
+            <Link onClick={onClickLogo} className={classes.brandBox}>
+              <div className={classes.logoContainer}>
+                <Logo />
+                <span className={classes.logoLetter}>PFTswap</span>
+              </div>
+            </Link>
             <Box className={classes.navLinkBox}>
               {tabConfig.map((tab, index) => (
                 <Fragment key={index}>
-                  {(!tab.connectedOnly || (tab.connectedOnly && walletState.wallet)) && <Button
-                    component={RouterLink}
-                    to={tab.navLink}
-                    className={classes.navLinkButton}
-                    disableRipple>
-                    <Typography
-                      className={cls(classes.navLink, {
-                        [classes.selectedMenu]: tab.highlightPaths.indexOf(location.pathname) > -1,
-                      })}
+                  {(!tab.connectedOnly ||
+                    (tab.connectedOnly && walletState.wallet)) && (
+                    <Button
+                      component={RouterLink}
+                      to={tab.navLink}
+                      className={classes.navLinkButton}
+                      disableRipple
                     >
-                      {tab.drawerText}
-                    </Typography>
-                  </Button>}
+                      <Typography
+                        className={cls(classes.navLink, {
+                          [classes.selectedMenu]:
+                            tab.highlightPaths.indexOf(location.pathname) > -1,
+                        })}
+                      >
+                        {tab.drawerText}
+                      </Typography>
+                    </Button>
+                  )}
                 </Fragment>
               ))}
             </Box>
@@ -206,9 +256,11 @@ const TopBar: React.FC<Props> = (
           alignItems="center"
         >
           {/* TODO temperory add drawer to only pool */}
-          {(currentPath === "pool" && isXs) ? (
+          {currentPath === "pool" && isXs ? (
             <div className={classes.menuIcon}>
-              <IconButton onClick={() => onToggleTabDrawer && onToggleTabDrawer()}>
+              <IconButton
+                onClick={() => onToggleTabDrawer && onToggleTabDrawer()}
+              >
                 <MenuIcon />
               </IconButton>
             </div>

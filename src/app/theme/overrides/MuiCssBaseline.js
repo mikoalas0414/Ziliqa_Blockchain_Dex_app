@@ -12,7 +12,7 @@ import AvenirNextUltraLightWoff from "../fonts/AvenirNext-UltraLight.woff";
 import AvenirNextUltraLightItalicWoff from "../fonts/AvenirNext-UltraLightItalic.woff";
 
 const AvenirNext = {
-  fontFamily: '"Avenir Next"',
+  fontFamily: '"conthrax"',
   fontStyle: 'normal',
   fontDisplay: 'swap',
 }

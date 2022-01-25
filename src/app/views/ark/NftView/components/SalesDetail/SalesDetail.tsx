@@ -293,7 +293,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   rarityLabel: {
     color: "#7B61FF",
-    fontFamily: "Avenir Next",
+    fontFamily: "conthrax",
     fontWeight: 900,
     textAlign: "center",
     WebkitTextStroke: "4px #7B61FF33"

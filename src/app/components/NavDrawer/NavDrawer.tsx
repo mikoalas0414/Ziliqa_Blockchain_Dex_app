@@ -122,6 +122,19 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     fontSize: 10,
     paddingBottom: "12px",
   },
+  buttonsContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: 15,
+    "@media(max-width: 670px)": {
+      flexDirection: 'column',
+      gap: 7,
+      "& div": {
+        width: 200,
+        margin: 'auto auto'
+      }
+    }
+  }
 }));
 
 const NavDrawer: React.FC<DrawerProps> = (props: any) => {
@@ -132,7 +145,7 @@ const NavDrawer: React.FC<DrawerProps> = (props: any) => {
   return (
     <Box className={classes.content}>
       {navigationConfig.map((navigation, listIndex) => (
-        <List key={listIndex}>
+        <List key={listIndex} className={classes.buttonsContainer}>
           {navigation.pages
             .filter((navigation) => navigation.show || claimEnabled)
             .map((page, index) => (
@@ -141,6 +154,7 @@ const NavDrawer: React.FC<DrawerProps> = (props: any) => {
                 key={index}
                 navigation={page}
                 showDrawer={true}
+                className={page.classname}
               />
             ))}
         </List>

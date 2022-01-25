@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   filterValue: {
     fontSize: 16,
     fontWeight: 'bolder',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     color: theme.palette.text!.primary,
     textTransform: "uppercase",
     flexGrow: 1
@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   filterOption: {
     fontSize: 16,
     fontWeight: 'bolder',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     padding: "5px 14px",
     color: theme.palette.text!.primary,
     display: "flex",

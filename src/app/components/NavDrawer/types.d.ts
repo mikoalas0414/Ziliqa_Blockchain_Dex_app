@@ -10,6 +10,7 @@ export type NavigationPageOptions = {
   disabled?: boolean;
   highlight?: boolean;
   items?: NavigationPageOptions[];
+  classname?: string;
 }
 
 export type NavigationOptions = {

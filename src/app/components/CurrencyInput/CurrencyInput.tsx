@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     }
   },
   label: {
+    fontFamily: 'ConthraxSb-Regular',
     position: "absolute",
     color: theme.palette.text?.primary,
     left: 20,
@@ -59,7 +60,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   currencyButton: {
     display: "flex",
     justifyContent: "space-between",
-    fontFamily: "Avenir Next",
+    fontFamily: "conthrax",
     fontWeight: "bold",
     borderRadius: 12,
     padding: "30px 18px 8px 5px",

@@ -8,7 +8,20 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: "conthrax";
+  src: local("conthrax"),
+    url("../font/ConthraxHvRegular/font.woff") format("truetype");
+}
+
+// @font-face {
+//   font-family: "PeleTwo";
+//   src: local("PeleTwo"),
+//     url("../font/PeleTwo/PeleTwo.woff") format("truetype");
+// }
+
 html {
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,6 +32,7 @@ html, body, #root {
   flex-direction: column;
   flex: 1;
   min-height: 100%;
+  font-family: 'conthrax';
 }
 
 a {
@@ -37,3 +51,123 @@ a {
   line-height: 1.5;
   font-size: 14px;
 }
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 4305015, 2022-01-19T17:07:11-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: ConthraxRg-Bold by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/bold/
+ * 
+ * Webfont: ConthraxRg-BoldItalic by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/bold-italic/
+ * 
+ * Webfont: ConthraxEl-Regular by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/extralight/
+ * 
+ * Webfont: ConthraxBk-Italic by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/book-italic/
+ * 
+ * Webfont: ConthraxBk-Regular by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/book/
+ * 
+ * Webfont: ConthraxEl-Italic by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/extralight-italic/
+ * 
+ * Webfont: ConthraxHv-Italic by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/heavy-italic/
+ * 
+ * Webfont: ConthraxHv-Regular by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/heavy/
+ * 
+ * Webfont: ConthraxLt-Italic by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/light-italic/
+ * 
+ * Webfont: ConthraxLt-Regular by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/light/
+ * 
+ * Webfont: ConthraxRg-Italic by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/italic/
+ * 
+ * Webfont: ConthraxRg-Regular by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/regular/
+ * 
+ * Webfont: ConthraxSb-Italic by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/semibold-italic/
+ * 
+ * Webfont: ConthraxSb-Regular by Typodermic
+ * URL: https://www.myfonts.com/fonts/typodermic/conthrax/semibold/
+ * 
+ * 
+ * Webfonts copyright: (c) 2016 Typodermic Fonts Inc.
+ * 
+ * © 2022 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/41b077");
+  
+@font-face {
+  font-family: "ConthraxRg-Bold";
+  src: url('../font/ConthraxRgBold/font.woff2') format('woff2'), url('../font/ConthraxRgBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxRg-Italic";
+  src: url('../font/ConthraxRgItalic/font.woff2') format('woff2'), url('../font/ConthraxRgItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxEl-Regular";
+  src: url('../font/ConthraxElRegular/font.woff2') format('woff2'), url('../font/ConthraxElRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxBk-Italic";
+  src: url('../font/ConthraxBkItalic/font.woff2') format('woff2'), url('../font/ConthraxBkItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxLt-Regular";
+  src: url('../font/ConthraxLtRegular/font.woff2') format('woff2'), url('../font/ConthraxLtRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxRg-Regular";
+  src: url('../font/ConthraxRgRegular/font.woff2') format('woff2'), url('../font/ConthraxRgRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxSb-Regular";
+  src: url('../font/ConthraxSbRegular/font.woff2') format('woff2'), url('../font/ConthraxSbRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxHv-Italic";
+  src: url('../font/ConthraxHvItalic/font.woff2') format('woff2'), url('../font/ConthraxHvItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxBk-Regular";
+  src: url('../font/ConthraxBkRegular/font.woff2') format('woff2'), url('../font/ConthraxBkRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxEl-Italic";
+  src: url('../font/ConthraxElItalic/font.woff2') format('woff2'), url('../font/ConthraxElItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxRg-BoldItalic";
+  src: url('../font/ConthraxRgBoldItalic/font.woff2') format('woff2'), url('../font/ConthraxRgBoldItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxLt-Italic";
+  src: url('../font/ConthraxLtItalic/font.woff2') format('woff2'), url('../font/ConthraxLtItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxSb-Italic";
+  src: url('../font/ConthraxSbItalic/font.woff2') format('woff2'), url('../font/ConthraxSbItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: "ConthraxHv-Regular";
+  src: url('../font/ConthraxHvRegular/font.woff2') format('woff2'), url('../font/ConthraxHvRegular/font.woff') format('woff');
+}
+

@@ -215,7 +215,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     verticalAlign: "top",
   },
   usdAmount: {
-    fontFamily: "Avenir Next"
+    fontFamily: "conthrax"
   },
   progress: {
     marginRight: theme.spacing(1)

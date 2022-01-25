@@ -168,7 +168,7 @@ const PoolMobileInfoCard: React.FC<Props> = (props: Props) => {
                         {" "}
                         {rewards[0].rewardToken.symbol}
                         <Text marginLeft={1} className={classes.halfOpacity}>
-                          {(rewards[0].rewardToken.isZil || rewards[0].rewardToken.isZwap) ? "by ZilSwap" : `by ${rewards[0].rewardToken.symbol}`}
+                          {(rewards[0].rewardToken.isZil || rewards[0].rewardToken.isZwap) ? "by PFTswap" : `by ${rewards[0].rewardToken.symbol}`}
                         </Text>
                       </Text>
                     )

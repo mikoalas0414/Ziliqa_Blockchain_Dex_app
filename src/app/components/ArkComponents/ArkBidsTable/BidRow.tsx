@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     width: 25,
   },
   text: {
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontWeight: 600,
     fontSize: 15,
     letterSpacing: '0.1px',

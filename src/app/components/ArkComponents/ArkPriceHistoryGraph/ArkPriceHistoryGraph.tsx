@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     margin: theme.spacing(4, 0, 2, 0),
   },
   salePrice: {
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontSize: "20px",
     fontWeight: 800,
     marginTop: theme.spacing(0.5),
@@ -83,19 +83,19 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     padding: 5,
   },
   legendData: {
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontSize: "12px",
     fontWeight: 700,
     color: "rgba(222, 255, 255, 1)",
   },
   legendText: {
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontSize: "12px",
     fontWeight: 700,
     color: "rgba(222, 255, 255, 0.5)",
   },
   change: {
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontSize: "14px",
   },
   noChange: {

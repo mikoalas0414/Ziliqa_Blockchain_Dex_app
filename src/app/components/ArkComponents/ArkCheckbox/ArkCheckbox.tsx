@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginBottom: theme.spacing(0.2),
     fontSize: 11,
     opacity: 0.5,
-    fontFamily: "Avenir Next",
+    fontFamily: "conthrax",
   },
   checkbox: {
     borderRadius: 3

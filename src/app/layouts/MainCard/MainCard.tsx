@@ -33,7 +33,7 @@ const CARD_BORDER_RADIUS = 12;
 const useStyles = makeStyles((theme: AppTheme) => ({
   root: {
     flex: 1,
-    padding: theme.spacing(8, 0, 2),
+    padding: theme.spacing(7, 0, 2),
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.down("sm")]: {

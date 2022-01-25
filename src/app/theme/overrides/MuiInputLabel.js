@@ -5,7 +5,7 @@ const MuiInputLabel = theme => ({
     fontWeight: 600,
     letterSpacing: 0,
     marginBottom: theme.spacing(1),
-    fontFamily: "Avenir Next"
+    fontFamily: "conthrax"
   },
 });
 

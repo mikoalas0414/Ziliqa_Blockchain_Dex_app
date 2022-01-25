@@ -5,7 +5,7 @@ const MuiOutlinedInput = theme => ({
     border: `1px solid rgba${hexToRGBA(theme.palette.primary.main, 0.3)}`,
     borderRadius: "12px",
     "& input": {
-      fontFamily: "Avenir Next",
+      fontFamily: "conthrax",
       fontWeight: "bold",
       fontSize: 26,
       padding: "34px 18px 12px",

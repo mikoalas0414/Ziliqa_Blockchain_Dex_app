@@ -520,7 +520,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   bestBid: {
     zIndex: 1,
-    fontFamily: "Avenir Next",
+    fontFamily: "conthrax",
     fontSize: 12,
     color: theme.palette.text!.primary,
     marginLeft: 18,

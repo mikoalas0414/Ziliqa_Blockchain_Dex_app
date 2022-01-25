@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   content: {
     position: "relative",
-    flex: 1,
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.down("sm")]: {

@@ -443,7 +443,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginRight: "2px",
   },
   bestAsk: {
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontSize: 14,
     fontWeight: 700,
   },
@@ -464,7 +464,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginRight: 6,
   },
   title: {
-    fontFamily: "'Raleway', sans-serif",
+    fontFamily: "ConthraxSb-Regular",
     fontWeight: 900,
     fontSize: "14px",
     lineHeight: "16px",
@@ -475,7 +475,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     padding: theme.spacing(0, 1.5),
   },
   body: {
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontSize: "12px",
     fontWeight: 600,
     color: theme.palette.primary.light,
@@ -524,7 +524,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     lineHeight: "16px",
   },
   username: {
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontSize: "12px",
     fontWeight: 600,
     color: "#6BE1FF",

@@ -1,6 +1,6 @@
 const typography = (palette) => ({
   fontFamily: [
-    "Roboto"
+    "ConthraxSb-Regular"
   ].join(","),
   h1: {
     fontSize: "26px",
@@ -9,7 +9,7 @@ const typography = (palette) => ({
     letterSpacing: "-0.2px",
   },
   h2: {
-    fontFamily: "Avenir Next",
+    fontFamily: "conthrax",
     fontWeight: "bold",
     fontSize: 26,
   },
@@ -20,7 +20,7 @@ const typography = (palette) => ({
     letterSpacing: "-0.2px",
   },
   h4: {
-    fontFamily: "Avenir Next",
+    fontFamily: "ConthraxSb-Regular",
     fontSize: "16px",
     lightHeight: "18px",
     fontWeight: 500
@@ -44,7 +44,7 @@ const typography = (palette) => ({
     letterSpacing: 0.05,
   },
   body1: {
-    fontFamily: "Avenir Next",
+    fontFamily: "ConthraxSb-Regular",
     fontSize: "12px",
     lineHeight: "14px",
     fontWeight: 600,
@@ -57,7 +57,7 @@ const typography = (palette) => ({
     fontWeight: 500
   },
   button: {
-    fontFamily: "Avenir Next",
+    fontFamily: "ConthraxSb-Regular",
     fontSize: "16px",
     fontWeight: 600,
     lineHeight: "18px",

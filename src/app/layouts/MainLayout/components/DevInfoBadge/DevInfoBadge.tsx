@@ -19,6 +19,7 @@ const getAvatar = (hostname: string) => {
 const useStyles = makeStyles((theme: AppTheme) => ({
   root: {
     position: "absolute",
+    display: 'none',
     top: theme.spacing(2),
     right: theme.spacing(4),
     [theme.breakpoints.down("xs")]: {

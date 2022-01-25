@@ -193,7 +193,7 @@ const ArkExpiry: React.FC<Props> = (props: Props) => {
 
 const useStyles = makeStyles((theme: AppTheme) => ({
   root: {
-    fontFamily: "Avenir Next",
+    fontFamily: "conthrax",
     "& .MuiAccordionSummary-root": {
       backgroundColor: theme.palette.currencyInput,
       border: "1px solid transparent",
@@ -321,7 +321,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     color: theme.palette.primary.light,
   },
   blockHeightText: {
-    fontFamily: "Avenir Next",
+    fontFamily: "conthrax",
     marginTop: 3,
     fontSize: 12,
     lineHeight: 1,

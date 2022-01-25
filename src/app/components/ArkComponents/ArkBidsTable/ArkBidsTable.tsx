@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     color: theme.palette.type === "dark" ? "#DEFFFF" : "#003340",
     borderBottom: theme.palette.border,
     padding: "8px 16px",
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontWeight: 600,
     fontSize: 13,
     letterSpacing: '0.2px',

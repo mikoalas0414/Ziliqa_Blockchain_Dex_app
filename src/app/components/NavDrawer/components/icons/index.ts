@@ -11,5 +11,6 @@ export { default as Gavel } from "./Gavel";
 export { default as Insights } from './Insights';
 export { default as Layers } from "./Layers";
 export { default as LocalAtm } from "./LocalAtm";
+export { default as Discord } from './Discord';
 export { default as MoreHoriz } from "./MoreHoriz";
 export { default as SwapHoriz } from "./SwapHoriz";

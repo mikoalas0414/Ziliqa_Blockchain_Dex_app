@@ -589,7 +589,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   instruction: {
     color: theme.palette.type === "dark" ? "#DEFFFF99" : "#00334099",
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontWeight: 600,
     fontSize: 11,
     margin: theme.spacing(0.4, 0),
@@ -600,7 +600,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(2),
     color: theme.palette.type === "dark" ? "#DEFFFF99" : "#00334099",
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontWeight: 600,
     fontSize: 10,
   },

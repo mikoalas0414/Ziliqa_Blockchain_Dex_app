@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   label: {
     fontSize: 13,
     color: theme.palette.type === "dark" ? "#DEFFFF" : "#0D1B24",
-    fontFamily: "'Raleway', sans-serif",
+    fontFamily: "ConthraxSb-Regular",
     fontWeight: 800,
     overflowX: "visible",
     '&.inline': {
@@ -104,7 +104,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   instruction: {
     color: theme.palette.type === "dark" ? "#DEFFFF99" : "#00334099",
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontWeight: 600,
     fontSize: 11,
     margin: theme.spacing(0.4, 0),
@@ -129,7 +129,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   wordLimit: {
     float: "right",
     color: theme.palette.type === "dark" ? "#DEFFFF99" : "#00334099",
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontWeight: 700,
     fontSize: 10,
   },

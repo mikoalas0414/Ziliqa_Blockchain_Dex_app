@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   filterCategoryLabel: {
     fontSize: 18,
     fontWeight: 'bolder',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     color: theme.palette.text!.primary,
     textTransform: "uppercase",
     textAlign: "left"
@@ -122,7 +122,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     fontSize: 16,
     overflow: "hidden",
     fontWeight: 'bolder',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     color: theme.palette.text!.primary,
   },
   filterValueSubText: {

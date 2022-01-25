@@ -415,7 +415,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   headerCell: {
     color: theme.palette.type === "dark" ? "#DEFFFF" : "#003340",
     padding: "8px 0 0 0",
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontWeight: 600,
     fontSize: 13,
     letterSpacing: '0.2px',
@@ -556,7 +556,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   popoverRow: {
     padding: '12px 24px',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     color: theme.palette.type === "dark" ? "#DEFFFF" : "#0D1B24",
     borderRadius: 12,
     fontWeight: 700,
@@ -570,7 +570,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   emptyRow: {
     padding: '12px 24px',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     color: theme.palette.type === "dark" ? "#DEFFFF" : "#0D1B24",
     borderRadius: 12,
     fontWeight: 700,
@@ -581,7 +581,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     opacity: 0.5,
   },
   resultCollectionName: {
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontSize: 18,
     [theme.breakpoints.down('sm')]: {
       fontSize: 16,

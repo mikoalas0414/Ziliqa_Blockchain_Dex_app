@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   header: {
     "& .MuiTableCell-root": {
       fontSize: 12,
-      fontFamily: 'Avenir Next',
+      fontFamily: 'conthrax',
       fontWeight: 600,
       opacity: 0.8,
       letterSpacing: '0.1px',
@@ -106,7 +106,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     "& .MuiTableCell-root": {
       fontSize: 14,
       fontWeight: 600,
-      fontFamily: 'Avenir Next',
+      fontFamily: 'conthrax',
       whiteSpace: "nowrap",
       '&.highlight': {
         fontSize: 15,

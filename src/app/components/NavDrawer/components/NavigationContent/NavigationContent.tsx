@@ -35,20 +35,49 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   root: {},
   listItem: {
     padding: 0,
-    border: '1px solid #29475A',
+    border: "1px solid #29475A",
     borderRadius: 12,
-    width: 140,
-    marginLeft: 20,
+    width: 'auto',
+    "& .pfts": {
+      "& span": {
+        color: "#ff6565",
+        "& svg": {
+          fill: "red !important",
+          "path": {
+            fill: "red",
+          }
+        },
+      },
+    },
+    "& .buyzil": {
+      "& span": {
+        color: "#ffbd3a",
+        "& svg": {},
+      },
+    },
+    "& .getpele": {
+      "& span": {
+        color: "#37f2f0",
+        "& svg": {},
+      },
+    },
+    "& .community": {
+      "& span": {
+        color: "#ffffff",
+        "& svg": {},
+      },
+    },
   },
   buttonLeaf: {
-    padding: theme.spacing(2, 3),
-    justifyContent: "flex-start",
+    padding: theme.spacing(1.7, 2),
+    justifyContent: "center",
     textTransform: "none",
     width: "100%",
-    borderRadius: 0,
+    borderRadius: 10,
     color: theme.palette.text?.primary,
     alignItems: "flex-end",
     height: 48,
+    fontFamily: "ConthraxHv-Regular",
   },
   buttonLeafActive: {
     boxShadow:
@@ -119,6 +148,7 @@ type NavigationContentProps = {
   secondary?: boolean;
   onClose?: any;
   showDrawer?: boolean;
+  className?: string;
 };
 
 const Icons = IconModule as unknown as { [key: string]: React.FC };
@@ -126,7 +156,7 @@ const Icons = IconModule as unknown as { [key: string]: React.FC };
 const NavigationContent: React.FC<NavigationContentProps> = (
   props: NavigationContentProps
 ) => {
-  const { navigation, secondary, onClose, showDrawer } = props;
+  const { navigation, secondary, onClose, showDrawer, className } = props;
   const classes = useStyles();
   const [expand, setExpand] = useState<any>(null);
   const [widgetOpen, setWidgetOpen] = useState(false);
@@ -159,7 +189,12 @@ const NavigationContent: React.FC<NavigationContentProps> = (
       setWidgetOpen(false)
     );
   };
-  const selected = (match: any, location: any) => navigation.href ? (InternalRouteMap[location.pathname] || location.pathname).startsWith(navigation.href!) : false;
+  const selected = (match: any, location: any) =>
+    navigation.href
+      ? (InternalRouteMap[location.pathname] || location.pathname).startsWith(
+          navigation.href!
+        )
+      : false;
 
   if (navigation.external && navigation.href) {
     return (
@@ -170,20 +205,22 @@ const NavigationContent: React.FC<NavigationContentProps> = (
               [classes.highlightTitle]: navigation.highlight,
               [classes.secondaryFont]: secondary,
             },
-            classes.buttonLeaf
+            classes.buttonLeaf,
+            className
           )}
           href={navigation.href}
           target="_blank"
         >
-          <Icon width="20px" className={cls(classes.icon, {
-            [classes.iconMargin]: showDrawer
-          })} />
-          {showDrawer &&
-            <>{navigation.title}</>
-          }
+          <Icon
+            width="20px"
+            className={cls(classes.icon, {
+              [classes.iconMargin]: showDrawer,
+            })}
+          />
+          {showDrawer && <>{navigation.title}</>}
         </Button>
       </ListItem>
-    )
+    );
   }
 
   if (navigation.purchase) {
@@ -196,66 +233,78 @@ const NavigationContent: React.FC<NavigationContentProps> = (
               [classes.highlightTitle]: navigation.highlight,
               [classes.secondaryFont]: secondary,
             },
-            classes.buttonLeaf
+            classes.buttonLeaf,
+            className
           )}
           onClick={(ev) => !widgetOpen && initWidget(ev)}
         >
-          <Icon width="20px" className={cls(classes.icon, {
-            [classes.iconMargin]: showDrawer
-          })} />
-          {showDrawer &&
-            <>{navigation.title}</>
-          }
+          <Icon
+            width="20px"
+            className={cls(classes.icon, {
+              [classes.iconMargin]: showDrawer,
+            })}
+          />
+          {showDrawer && <>{navigation.title}</>}
         </Button>
       </ListItem>
-    )
+    );
   }
 
   if (navigation.expand) {
-    return <>
-      <ListItem
-        className={cls(
-          {
-            [classes.highlightTitle]: navigation.highlight,
-            [classes.secondaryFont]: secondary,
-          },
-          classes.buttonLeaf,
-          classes.listItem
-        )}
-        button
-        onClick={() =>
-          setExpand(navigation.title === expand ? null : navigation.title)
-        }
-      >
-        <Icon width="20px" className={cls(classes.icon, {
-            [classes.iconMargin]: showDrawer
-          })} />
-        {showDrawer &&
-          <>
-            <ListItemText
-              primary={navigation.title}
-              primaryTypographyProps={{ className: classes.mainFont }}
-            />
-            {expand === navigation.title ? <ArrowDropUp /> : <ArrowDropDown />}
-          </>
-        }
-      </ListItem>
-      <Collapse in={expand === navigation.title}>
-        <List className={cls(classes.listItem, classes.expandedList)}>
-          {navigation.items &&
-            navigation.items.map(
-              (item: NavigationPageOptions, index: number) => (
-                <NavigationContent
-                  key={index}
-                  navigation={item}
-                  secondary={true}
-                  showDrawer={showDrawer}
-                />
-              )
-            )}
-        </List>
-      </Collapse>
-    </>
+    return (
+      <>
+        <ListItem
+          className={cls(
+            {
+              [classes.highlightTitle]: navigation.highlight,
+              [classes.secondaryFont]: secondary,
+            },
+            classes.buttonLeaf,
+            classes.listItem,
+            className
+          )}
+          button
+          onClick={() =>
+            setExpand(navigation.title === expand ? null : navigation.title)
+          }
+        >
+          <Icon
+            width="20px"
+            className={cls(classes.icon, {
+              [classes.iconMargin]: showDrawer,
+            })}
+          />
+          {showDrawer && (
+            <>
+              <ListItemText
+                primary={navigation.title}
+                primaryTypographyProps={{ className: classes.mainFont }}
+              />
+              {expand === navigation.title ? (
+                <ArrowDropUp />
+              ) : (
+                <ArrowDropDown />
+              )}
+            </>
+          )}
+        </ListItem>
+        <Collapse in={expand === navigation.title}>
+          <List className={cls(classes.listItem, classes.expandedList)}>
+            {navigation.items &&
+              navigation.items.map(
+                (item: NavigationPageOptions, index: number) => (
+                  <NavigationContent
+                    key={index}
+                    navigation={item}
+                    secondary={true}
+                    showDrawer={showDrawer}
+                  />
+                )
+              )}
+          </List>
+        </Collapse>
+      </>
+    );
   }
 
   return (
@@ -279,10 +328,13 @@ const NavigationContent: React.FC<NavigationContentProps> = (
         to={navigation.disabled ? "/disabled-path" : navigation.href}
         exact={false}
       >
-        <Icon width="20px" className={cls(classes.icon, {
-          [classes.iconMargin]: showDrawer
-        })} />
-        {showDrawer &&
+        <Icon
+          width="20px"
+          className={cls(classes.icon, {
+            [classes.iconMargin]: showDrawer,
+          })}
+        />
+        {showDrawer && (
           <>
             {navigation.title === "Swap + Pool" ? (
               <span>
@@ -300,10 +352,10 @@ const NavigationContent: React.FC<NavigationContentProps> = (
               </span>
             )}
           </>
-        }
+        )}
       </Button>
     </ListItem>
-  )
+  );
 };
 
 export default NavigationContent;

@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   emptyRow: {
     padding: '12px 24px',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     color: theme.palette.type === "dark" ? "#DEFFFF" : "#0D1B24",
     borderRadius: 12,
     fontWeight: 700,
@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   popoverRow: {
     padding: '12px 24px',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     color: theme.palette.type === "dark" ? "#DEFFFF" : "#0D1B24",
     borderRadius: 12,
     fontWeight: 700,
@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     },
   },
   resultCollectionName: {
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     fontSize: 18,
     [theme.breakpoints.down('sm')]: {
       fontSize: 16,
@@ -151,12 +151,12 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   filterValue: {
     fontSize: 16,
     fontWeight: 'bolder',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     color: theme.palette.text!.primary,
     "& .MuiFormControlLabel-label": {
       fontSize: 16,
       fontWeight: 'bolder',
-      fontFamily: 'Avenir Next',
+      fontFamily: 'conthrax',
     }
   },
   endAdor: {

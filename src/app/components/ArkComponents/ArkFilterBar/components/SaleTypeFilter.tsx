@@ -78,18 +78,18 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   filterValue: {
     fontSize: 16,
     fontWeight: 'bolder',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     color: theme.palette.text!.primary,
     "& .MuiFormControlLabel-label": {
       fontSize: 16,
       fontWeight: 'bolder',
-      fontFamily: 'Avenir Next',
+      fontFamily: 'conthrax',
     }
   },
   filterOption: {
     fontSize: 16,
     fontWeight: 'bolder',
-    fontFamily: 'Avenir Next',
+    fontFamily: 'conthrax',
     paddingTop: 2,
     paddingBottom: 2,
     color: theme.palette.text!.primary,
