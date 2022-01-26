@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       ],
   },
   link: {
-    color: theme.palette.type === "dark" ? "#00FFB0" : "#003340",
+    color: theme.palette.type === "dark" ? "#37f2f0" : "#003340",
   },
   rounded: {
     borderRadius: "12px",
@@ -136,7 +136,7 @@ const ConnectWallet: React.FC<
               Click{" "}
               <Link
                 style={{
-                  color: theme.palette.type === "dark" ? "#00FFB0" : "#003340",
+                  color: theme.palette.type === "dark" ? "#37f2f0" : "#003340",
                 }}
                 href="https://docs.zilswap.io/more/help/use-zilpay-on-zilswap"
                 target="_blank"

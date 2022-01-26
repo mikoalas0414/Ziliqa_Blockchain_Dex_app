@@ -198,18 +198,18 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       backgroundColor: theme.palette.currencyInput,
       border: "1px solid transparent",
       "&:hover": {
-        borderColor: "#00FFB0",
+        borderColor: "#37f2f0",
         "& .MuiSvgIcon-root": {
-          color: "#00FFB0",
+          color: "#37f2f0",
         },
       },
     },
     "& .MuiAccordionSummary-root.Mui-expanded": {
       borderRadius: 12,
       marginBottom: theme.spacing(1.5),
-      borderColor: "#00FFB0",
+      borderColor: "#37f2f0",
       "& .MuiSvgIcon-root": {
-        color: "#00FFB0",
+        color: "#37f2f0",
       },
     },
     "& .MuiOutlinedInput-root": {
@@ -258,10 +258,10 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       }
     },
     "& .react-datepicker__day--keyboard-selected": {
-      backgroundColor: "#00FFB0",
+      backgroundColor: "#37f2f0",
       color: "#29475A",
       "&:hover": {
-        backgroundColor: "#00FFB0!important",
+        backgroundColor: "#37f2f0!important",
       }
     },
     "& .react-datepicker__day--selected": {
@@ -340,7 +340,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     minHeight: "32px",
   },
   selected: {
-    color: "#00FFB0",
+    color: "#37f2f0",
   },
 }));
 

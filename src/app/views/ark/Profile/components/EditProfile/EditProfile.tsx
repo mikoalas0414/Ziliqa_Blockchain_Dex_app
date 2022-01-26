@@ -486,12 +486,12 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     minHeight: "50px",
     width: "100%",
     borderRadius: "12px",
-    backgroundColor: "#6BE1FF",
+    backgroundColor: "#EEBF43",
     "& .MuiButton-label": {
       color: "#003340",
     },
     "&:disabled": {
-      backgroundColor: "#6BE1FF88",
+      backgroundColor: "#EEBF4388",
       "& .MuiButton-label": {
         color: "#00334088",
       },
@@ -542,7 +542,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     maxWidth: 80,
     alignSelf: "center",
     marginTop: theme.spacing(1),
-    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF17" : "#6BE1FF33",
+    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF17" : "#EEBF4333",
     color: theme.palette.type === "dark" ? "#DEFFFF" : "#003340",
     cursor: "pointer",
     marginBottom: theme.spacing(1),
@@ -572,7 +572,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   dropBox: {
     borderRadius: 12,
     border: `2px dotted ${theme.palette.type === "dark" ? "#0D1B24" : "#FFFFFF"}`,
-    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF17" : "#6BE1FF33",
+    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF17" : "#EEBF4333",
     overflow: "hidden",
     cursor: "pointer",
   },

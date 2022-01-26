@@ -39,9 +39,9 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   root: {
   },
   link: {
-    color: '#6BE1FF',
+    color: '#EEBF43',
     '&:hover': {
-      color: darken('#6BE1FF', 0.1),
+      color: darken('#EEBF43', 0.1),
     }
   },
   imageContainer: {
@@ -147,7 +147,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   green: {
     extend: 'text',
-    color: "#00FFB0",
+    color: "#37f2f0",
   },
   red: {
     extend: 'text',

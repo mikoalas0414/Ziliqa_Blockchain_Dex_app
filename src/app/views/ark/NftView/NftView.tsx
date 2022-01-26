@@ -220,7 +220,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     fontFamily: "'Raleway', sans-serif",
     fontWeight: 700,
     fontSize: "16px",
-    color: "#6BE1FF",
+    color: "#EEBF43",
     "-webkit-text-stroke-color": "rgba(107, 225, 255, 0.2)",
     "-webkit-text-stroke-width": "1px",
   },

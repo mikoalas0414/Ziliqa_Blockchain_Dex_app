@@ -441,7 +441,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   percentCell: {
     extend: 'bodyCell',
     fontSize: 18,
-    color: '#00FFB0',
+    color: '#37f2f0',
   },
   numberCell: {
     extend: 'bodyCell',

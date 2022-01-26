@@ -78,10 +78,10 @@ const GreenSwitch = withStyles((theme) => ({
   track: {
     borderRadius: 10,
     opacity: 0.5,
-    backgroundColor: "#00FFB0",
+    backgroundColor: "#37f2f0",
     '$checked$checked + &': {
       opacity: 1,
-      backgroundColor: "#00FFB0",
+      backgroundColor: "#37f2f0",
     },
   },
   checked: {},

@@ -75,14 +75,14 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     fontSize: 13,
     marginBottom: -2,
     '&.liked': {
-      color: theme.palette.type === 'dark' ? '#00FFB0' : 'rgba(0, 51, 64, 0.6)',
+      color: theme.palette.type === 'dark' ? '#37f2f0' : 'rgba(0, 51, 64, 0.6)',
     },
     '&.bold': {
       color: theme.palette.text!.primary,
       fontWeight: 700,
       fontSize: 18,
       '&.liked': {
-        color: theme.palette.type === 'dark' ? '#00FFB0' : theme.palette.text!.primary,
+        color: theme.palette.type === 'dark' ? '#37f2f0' : theme.palette.text!.primary,
       },
     },
     '&.thin': {
@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     },
     '&.liked': {
       '& > path': {
-        fill: '#00FFB0',
+        fill: '#37f2f0',
         stroke: 'rgba(0, 51, 64, 0.2)',
       },
     }

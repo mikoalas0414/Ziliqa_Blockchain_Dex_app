@@ -494,7 +494,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   rarityBar: {
     display: "flex",
-    backgroundColor: "#6BE1FF",
+    backgroundColor: "#EEBF43",
     borderRadius: 5,
     padding: "1.5px",
     width: "100%",
@@ -527,7 +527,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     fontFamily: 'conthrax',
     fontSize: "12px",
     fontWeight: 600,
-    color: "#6BE1FF",
+    color: "#EEBF43",
     maxWidth: 100,
     textOverflow: "ellipsis",
     overflow: "hidden",
@@ -547,7 +547,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     padding: theme.spacing(1, 0, 1),
     cursor: "pointer",
     "&:hover": {
-      color: "#6BE1FF",
+      color: "#EEBF43",
     }
   },
   extraMargin: {

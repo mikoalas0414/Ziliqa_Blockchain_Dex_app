@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   button: {
     padding: "4px 10px",
-    border: "1px solid #00FFB0",
+    border: "1px solid #37f2f0",
     color: '#DEFFFF',
     marginRight: theme.spacing(2),
     minHeight: 26

@@ -205,9 +205,9 @@ const TokenGraph: React.FC<Props> = (props: Props) => {
           precision: (ratesData && ratesData?.[0].low < 0.01) ? 5 : 2,
           minMove: (ratesData && ratesData?.[0].low < 0.01) ? 0.00001 : 0.01
         },
-        upColor: themeType === "dark" ? "#00FFB0" : "#02586D",
-        wickUpColor: themeType === "dark" ? "#00FFB0" : "#02586D",
-        borderUpColor: themeType === "dark" ? "#00FFB0" : "#02586D",
+        upColor: themeType === "dark" ? "#37f2f0" : "#02586D",
+        wickUpColor: themeType === "dark" ? "#37f2f0" : "#02586D",
+        borderUpColor: themeType === "dark" ? "#37f2f0" : "#02586D",
         downColor: "#FF5252",
         borderDownColor: "#FF5252",
         wickDownColor: "#FF5252"

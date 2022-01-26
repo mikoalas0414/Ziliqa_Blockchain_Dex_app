@@ -39,9 +39,9 @@ const MuiButton = theme => ({
   },
   containedPrimary: {
     color: theme.palette.type === "dark" ? "#003340" : "#DEFFFF",
-    backgroundColor: theme.palette.type === "dark" ? "#6BE1FF" : "#003340",
+    backgroundColor: theme.palette.type === "dark" ? "#EEBF43" : "#003340",
     '&:hover': {
-      backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#6BE1FF", 0.8)}` : `rgba${hexToRGBA("#003340", 0.8)}`,
+      backgroundColor: theme.palette.type === "dark" ? `rgba${hexToRGBA("#EEBF43", 0.8)}` : `rgba${hexToRGBA("#003340", 0.8)}`,
       // Reset on touch devices, it doesn't add specificity
       '@media (hover: none)': {
         backgroundColor: theme.palette.primary.main,

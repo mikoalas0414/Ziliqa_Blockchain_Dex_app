@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: "1px solid transparent",
     borderImage:
       theme.palette.type === "dark"
-        ? "linear-gradient(to left, #003340 1%, #6BE1FF 50%, #003340 100%) 0 0 100% 0/0 0 1px 0 stretch"
+        ? "linear-gradient(to left, #003340 1%, #EEBF43 50%, #003340 100%) 0 0 100% 0/0 0 1px 0 stretch"
         : "",
     [theme.breakpoints.up("sm")]: {
       "&>div": {

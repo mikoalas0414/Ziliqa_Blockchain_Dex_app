@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   actionButton: {
     color: theme.palette.text?.primary,
     borderRadius: "12px",
-    backgroundColor: theme.palette.type === "dark" ? "#003340" : "#6BE1FF",
+    backgroundColor: theme.palette.type === "dark" ? "#003340" : "#EEBF43",
     display: "flex",
     width: "50%",
     padding: "12px 32px",
@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     borderTop: theme.palette.border,
   },
   green: {
-    color: "#00FFB0",
+    color: "#37f2f0",
   },
   red: {
     color: "#FF5252",

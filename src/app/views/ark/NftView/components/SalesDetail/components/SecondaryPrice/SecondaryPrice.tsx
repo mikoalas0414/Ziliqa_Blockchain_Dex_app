@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     padding: theme.spacing(0.5, 1),
     marginRight: theme.spacing(0.8),
     borderRadius: 6,
-    color: '#6BE1FF',
+    color: '#EEBF43',
     background: 'rgba(107, 225, 255, 0.2)',
     fontFamily: "conthrax",
     fontWeight: 700,

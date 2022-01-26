@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   topbarButton: {
     padding: "2px 8px",
     color: theme.palette.primary.contrastText,
-    border: "1px solid #00FFB0",
+    border: "1px solid #37f2f0",
     alignItems: "flex-end"
   },
   buttonIcon: {

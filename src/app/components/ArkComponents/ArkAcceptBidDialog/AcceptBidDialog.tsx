@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     borderRadius: "0 0 12px 12px",
   },
   card: {
-    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF11" : "#6BE1FF33",
+    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF11" : "#EEBF4333",
   },
   header: {
     opacity: 0.5,
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     flexDirection: "row",
   },
   activeGreen: {
-    color: "#00FFB0",
+    color: "#37f2f0",
   },
   item: {
     padding: "0",
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     borderRadius: "12px",
     display: "flex",
     padding: "18px 32px",
-    backgroundColor: theme.palette.type === "dark" ? "#003340" : "#6BE1FF",
+    backgroundColor: theme.palette.type === "dark" ? "#003340" : "#EEBF43",
     color: theme.palette.text?.primary,
     alignItems: "center"
   },
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   backButton: {
     color: theme.palette.text?.primary,
-    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#6BE1FF88",
+    backgroundColor: theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#EEBF4388",
     marginTop: theme.spacing(2),
     "&:hover": {
       opacity: 0.5

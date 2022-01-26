@@ -88,7 +88,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       extend: 'badge',
       cursor: 'pointer',
       '& svg > path': {
-        stroke: "#00FFB0",
+        stroke: "#37f2f0",
         "stroke-opacity": 1,
       },
     }

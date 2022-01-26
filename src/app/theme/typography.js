@@ -44,17 +44,19 @@ const typography = (palette) => ({
     letterSpacing: 0.05,
   },
   body1: {
-    fontFamily: "ConthraxSb-Regular",
+    fontFamily: "ConthraxLt-Regular",
     fontSize: "11px",
     lineHeight: "14px",
     fontWeight: 600,
-    letterSpacing: 0,
+    letterSpacing: 1,
   },
   body2: {
-    fontSize: "12px",
+    fontSize: "11px",
     lineHeight: "16px",
-    letterSpacing: "-0.2px",
-    fontWeight: 500
+    letterSpacing: "0px",
+    fontWeight: 500,
+    fontFamily: "ConthraxLt-Regular",
+    letterSpacing: "1px"
   },
   button: {
     fontFamily: "ConthraxSb-Regular",

@@ -82,19 +82,19 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   buttonLeafActive: {
     boxShadow:
       theme.palette.type === "dark"
-        ? "inset 5px 0 0 #00FFB0"
+        ? "inset 5px 0 0 #37f2f0"
         : "inset 5px 0 0 #003340",
     "& svg": {
       "& path": {
-        fill: theme.palette.type === "dark" ? "#00FFB0" : "",
+        fill: theme.palette.type === "dark" ? "#37f2f0" : "",
       },
     },
     "& .MuiButton-label": {
-      color: theme.palette.type === "dark" ? "#00FFB0" : "",
+      color: theme.palette.type === "dark" ? "#37f2f0" : "",
     },
   },
   highlightTitle: {
-    color: theme.palette.type === "dark" ? "#00FFB0" : "",
+    color: theme.palette.type === "dark" ? "#37f2f0" : "",
   },
   mainFont: {
     fontSize: "16px!important",
@@ -115,7 +115,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#F6FFFC",
   },
   textColoured: {
-    color: theme.palette.type === "dark" ? "#00FFB0" : "#003340",
+    color: theme.palette.type === "dark" ? "#37f2f0" : "#003340",
   },
   buyZil: {
     "& svg": {

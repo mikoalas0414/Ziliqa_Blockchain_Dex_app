@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginLeft: 5,
   },
   viewIcon: {
-    color: theme.palette.type === "dark" ? "#00FFB0" : `rgba${hexToRGBA("#003340", 0.5)}`,
+    color: theme.palette.type === "dark" ? "#37f2f0" : `rgba${hexToRGBA("#003340", 0.5)}`,
     position: "absolute",
     top: "50%",
     left: "50%",
@@ -122,7 +122,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   box: {
     backgroundColor: theme.palette?.currencyInput,
-    border: `3px solid rgba${hexToRGBA("#00FFB0", 0.2)}`,
+    border: `3px solid rgba${hexToRGBA("#37f2f0", 0.2)}`,
     margin: "2px",
   },
   currencyText: {

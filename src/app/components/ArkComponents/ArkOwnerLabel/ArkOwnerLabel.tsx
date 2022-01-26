@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   root: {
     fontSize: "12px",
     fontWeight: 700,
-    color: "#6BE1FF",
+    color: "#EEBF43",
     maxWidth: 100,
     textOverflow: "ellipsis",
     overflow: "hidden",
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       fontSize: "14px",
     },
     '&:hover $root': {
-      color: darken('#6BE1FF', 0.1),
+      color: darken('#EEBF43', 0.1),
     }
   }
 }));

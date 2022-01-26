@@ -512,7 +512,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     cursor: "pointer"
   },
   saleTypeButtonSelected: {
-    backgroundColor: "#00FFB0",
+    backgroundColor: "#37f2f0",
     color: "#003340",
   },
   actionButton: {
@@ -587,11 +587,11 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginBottom: 2
   },
   stepActive: {
-    backgroundColor: "#6BE1FF",
+    backgroundColor: "#EEBF43",
     color: "#003340"
   },
   stepCompleted: {
-    backgroundColor: "#00FFB0",
+    backgroundColor: "#37f2f0",
     color: "#003340"
   },
   stepBar: {
@@ -601,14 +601,14 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     height: 44,
     width: 6,
     backgroundColor: "#223139",
-    backgroundImage: "linear-gradient(#6BE1FF, #223139)",
+    backgroundImage: "linear-gradient(#EEBF43, #223139)",
     zIndex: 0,
   },
   stepBarFirstStepCompleted: {
-    backgroundImage: "linear-gradient(#00FFB0, #6BE1FF)",
+    backgroundImage: "linear-gradient(#37f2f0, #EEBF43)",
   },
   stepBarCompleted: {
-    backgroundImage: "linear-gradient(#00FFB0, #00FFB0)",
+    backgroundImage: "linear-gradient(#37f2f0, #37f2f0)",
   },
   breakWord: {
     wordBreak: "break-word"

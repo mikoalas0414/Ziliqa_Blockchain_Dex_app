@@ -444,7 +444,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     },
   },
   titleColoured: {
-    color: theme.palette.type === "dark" ? "#00FFB0" : `rgba${hexToRGBA("#003340", 0.5)}`
+    color: theme.palette.type === "dark" ? "#37f2f0" : `rgba${hexToRGBA("#003340", 0.5)}`
   },
   addIcon: {
     color: theme.palette.text?.secondary,
@@ -453,12 +453,12 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginRight: theme.spacing(0.2)
   },
   viewIcon: {
-    color: theme.palette.type === "dark" ? "#00FFB0" : `rgba${hexToRGBA("#003340", 0.5)}`,
+    color: theme.palette.type === "dark" ? "#37f2f0" : `rgba${hexToRGBA("#003340", 0.5)}`,
     fontSize: 14,
   },
   box: {
     backgroundColor: theme.palette?.currencyInput,
-    border: `3px solid rgba${hexToRGBA("#00FFB0", 0.2)}`,
+    border: `3px solid rgba${hexToRGBA("#37f2f0", 0.2)}`,
     margin: "2px",
   },
   token: {
@@ -493,7 +493,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginLeft: 15,
     borderBottom: theme.palette.type === "dark" ? "1px solid transparent" : `1px solid rgba${hexToRGBA("#003340", 0.5)}`,
     borderImage: theme.palette.type === "dark"
-      ? "linear-gradient(to left, #003340 1%, #00FFB0  50%, #003340 100%) 0 0 100% 0/0 0 1px 0 stretch"
+      ? "linear-gradient(to left, #003340 1%, #37f2f0  50%, #003340 100%) 0 0 100% 0/0 0 1px 0 stretch"
       : "",
   },
   label: {

@@ -143,9 +143,9 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     },
   },
   buttonLeafActive: {
-    boxShadow: "inset 5px 0 0 #6BE1FF",
+    boxShadow: "inset 5px 0 0 #EEBF43",
     "& .MuiButton-label": {
-      color: "#6BE1FF",
+      color: "#EEBF43",
     },
   },
   logo: {

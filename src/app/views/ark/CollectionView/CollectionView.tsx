@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     alignItems: "center",
     borderRadius: 12,
     backgroundColor:
-      theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#6BE1FF40",
+      theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#EEBF4340",
   },
   clickable: {
     cursor: 'pointer',
@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     borderRadius: "12px",
     padding: "8px 24px",
     backgroundColor:
-      theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#6BE1FF40",
+      theme.palette.type === "dark" ? "rgba(222, 255, 255, 0.1)" : "#EEBF4340",
     alignSelf: "center",
     width: "fit-content",
     cursor: "pointer",

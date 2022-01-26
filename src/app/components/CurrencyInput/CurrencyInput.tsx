@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       width: "inherit",
       padding: "2px 4px",
       backgroundColor: `rgba${hexToRGBA(
-        theme.palette.type === "dark" ? "#00FFB0" : "#003340",
+        theme.palette.type === "dark" ? "#37f2f0" : "#003340",
         0.75
       )}`,
       borderRadius: 5,
@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       },
       "&:hover": {
         backgroundColor: `rgba${hexToRGBA(
-          theme.palette.type === "dark" ? "#00FFB0" : "#003340",
+          theme.palette.type === "dark" ? "#37f2f0" : "#003340",
           0.5
         )}`,
       },
@@ -121,7 +121,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       color: theme.palette.type === "dark" ? "#003340" : "#DEFFFF",
       "& .MuiButton-label": {
         backgroundColor: `rgba${hexToRGBA(
-          theme.palette.type === "dark" ? "#00FFB0" : "#003340",
+          theme.palette.type === "dark" ? "#37f2f0" : "#003340",
           0.4
         )}`,
       },

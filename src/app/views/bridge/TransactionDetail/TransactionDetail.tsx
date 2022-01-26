@@ -191,10 +191,10 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       zIndex: 1
     },
     // "& .MuiStepIcon-active": {
-    //   boxShadow: "0px 0px 0px 1.5px #00FFB0 inset"
+    //   boxShadow: "0px 0px 0px 1.5px #37f2f0 inset"
     // },
     "& .MuiStepIcon-completed": {
-      color: "#00FFB0",
+      color: "#37f2f0",
       backgroundColor: theme.palette.type === "light" ? "#29475A" : ""
     },
     "& .MuiSvgIcon-root": {
@@ -260,12 +260,12 @@ const ColorlibConnector = withStyles({
   },
   active: {
     '& $line': {
-      backgroundColor: "#00FFB0",
+      backgroundColor: "#37f2f0",
     },
   },
   completed: {
     '& $line': {
-      backgroundColor: "#00FFB0",
+      backgroundColor: "#37f2f0",
     },
   },
   line: {

@@ -183,7 +183,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
         backgroundColor: "#FFDF6B"
     },
     completeChip: {
-        backgroundColor: "#00FFB0"
+        backgroundColor: "#37f2f0"
     },
     currencyLogo: {
         height: "20px",

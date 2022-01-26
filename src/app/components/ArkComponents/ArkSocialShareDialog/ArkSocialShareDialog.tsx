@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 12,
     minWidth: 0,
     color: theme.palette.text.primary,
-    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF17" : "#6BE1FF33",
+    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF17" : "#EEBF4333",
     opacity: 0.5,
     display: "flex",
     flexDirection: "column",

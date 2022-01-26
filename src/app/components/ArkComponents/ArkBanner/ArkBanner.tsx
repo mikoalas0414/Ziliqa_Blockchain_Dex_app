@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   },
   bannerButton: {
     position: "absolute",
-    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF17" : "#6BE1FF33",
+    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF17" : "#EEBF4333",
     color: theme.palette.type === "dark" ? "#DEFFFF" : "#003340",
     zIndex: 1000,
     marginRight: 10,

@@ -27,14 +27,14 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     "& .MuiSwitch-track": {
       position: "relative",
       ...(props.forceDark && {
-        backgroundColor: `rgba${hexToRGBA("#00FFB0", 0.5)}`,
+        backgroundColor: `rgba${hexToRGBA("#37f2f0", 0.5)}`,
       }),
     },
     "& .Mui-checked+.MuiSwitch-track": {
       backgroundColor: `rgba${hexToRGBA("#003340", 0.5)}`,
     },
     "& .MuiSwitch-thumb": {
-      backgroundColor: theme.palette.type === "dark" ? "#00FFB0" : "#003340",
+      backgroundColor: theme.palette.type === "dark" ? "#37f2f0" : "#003340",
       width: 14,
       height: 14,
     },

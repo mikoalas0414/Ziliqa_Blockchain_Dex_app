@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     borderRadius: 12,
     width: "100%",
     padding: "8px 16px",
-    backgroundColor: "#6BE1FF",
+    backgroundColor: "#EEBF43",
     marginTop: theme.spacing(1),
     cursor: "pointer",
     textAlign: "center",

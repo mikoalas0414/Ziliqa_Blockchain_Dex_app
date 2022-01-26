@@ -222,13 +222,13 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   bidButton: {
     padding: theme.spacing(2.5, 4),
     borderRadius: theme.spacing(1.5),
-    backgroundColor: "#6BE1FF",
+    backgroundColor: "#EEBF43",
     "& .MuiButton-label": {
       color: "#003340",
     },
     "&:hover": {
       border: 'none',
-      backgroundColor: darken("#6BE1FF", 0.1),
+      backgroundColor: darken("#EEBF43", 0.1),
       "& .MuiButton-label": {
         color: darken("#003340", 0.1),
       },
@@ -301,7 +301,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   menuButton: {
     borderRadius: 8,
     padding: "8px",
-    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF17" : "#6BE1FF33",
+    backgroundColor: theme.palette.type === "dark" ? "#DEFFFF17" : "#EEBF4333",
     color: theme.palette.type === "dark" ? "#DEFFFF" : "#003340",
     "&:hover": {
       opacity: 0.5,

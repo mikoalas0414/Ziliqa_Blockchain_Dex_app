@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
   line: {
     width: "50px",
     height: "1px",
-    color: "#00FFB0",
+    color: "#37f2f0",
   },
   priceHistory: {
     fontFamily: "'Raleway', sans-serif",
@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     marginRight: theme.spacing(1),
   },
   priceUp: {
-    color: "#00FFB0",
+    color: "#37f2f0",
     marginRight: theme.spacing(1),
   },
   priceDown: {
@@ -186,14 +186,14 @@ const ArkPriceHistoryGraph: React.FC<Props> = (props: Props) => {
       });
 
       const floorSeries = newChart.addLineSeries({
-        color: "#6BE1FF",
+        color: "#EEBF43",
         lineWidth: 3,
         title: "Floor",
         priceLineVisible: false,
       });
 
       const bidSeries = newChart.addLineSeries({
-        color: "#00FFB0",
+        color: "#37f2f0",
         lineWidth: 3,
         title: "Highest Bid",
         priceLineVisible: false,
