@@ -103,6 +103,7 @@ const useStyles = makeStyles((theme: AppTheme) => ({
         fill: theme.palette.type === "dark" ? "#37f2f0" : "",
       },
     },
+    
     "& .MuiButton-label": {
       color: theme.palette.type === "dark" ? "#37f2f0" : "",
     },
