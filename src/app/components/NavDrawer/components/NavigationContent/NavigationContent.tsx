@@ -42,9 +42,8 @@ const useStyles = makeStyles((theme: AppTheme) => ({
       "& span": {
         color: "#ff6565",
         "& svg": {
-          fill: "red !important",
-          "path": {
-            fill: "red",
+          "& path": {
+            fill: "#ff6565 !important",
           }
         },
       },
@@ -52,24 +51,36 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     "& .buyzil": {
       "& span": {
         color: "#ffbd3a",
-        "& svg": {},
+        "& svg": {
+          "& path": {
+            fill: "#ffbd3a !important",
+          }
+        },
       },
     },
     "& .getpele": {
       "& span": {
         color: "#37f2f0",
-        "& svg": {},
+        "& svg": {
+          "& path": {
+            fill: "#37f2f0 !important",
+          }
+        },
       },
     },
     "& .community": {
       "& span": {
         color: "#ffffff",
-        "& svg": {},
+        "& svg": {
+          "& path": {
+            fill: "#ffffff !important",
+          }
+        },
       },
     },
   },
   buttonLeaf: {
-    padding: theme.spacing(1.7, 2),
+    padding: theme.spacing(1.325, 2),
     justifyContent: "center",
     textTransform: "none",
     width: "100%",
@@ -78,6 +89,9 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     alignItems: "flex-end",
     height: 48,
     fontFamily: "ConthraxSb-Regular",
+    '&  span': {
+      alignItems: "center",
+    }
   },
   buttonLeafActive: {
     boxShadow:
@@ -103,8 +117,13 @@ const useStyles = makeStyles((theme: AppTheme) => ({
     fontSize: "14px!important",
   },
   icon: {
+    height: 25,
+    width: 25,
     "& path": {
       fill: theme.palette.text?.primary,
+    },
+    "svg": {
+      height: 20,
     },
   },
   iconMargin: {
@@ -212,7 +231,6 @@ const NavigationContent: React.FC<NavigationContentProps> = (
           target="_blank"
         >
           <Icon
-            width="20px"
             className={cls(classes.icon, {
               [classes.iconMargin]: showDrawer,
             })}
@@ -228,7 +246,7 @@ const NavigationContent: React.FC<NavigationContentProps> = (
       <ListItem className={classes.listItem} disableGutters button>
         <Button
           className={cls(
-            classes.buyZil,
+            // classes.buyZil,
             {
               [classes.highlightTitle]: navigation.highlight,
               [classes.secondaryFont]: secondary,

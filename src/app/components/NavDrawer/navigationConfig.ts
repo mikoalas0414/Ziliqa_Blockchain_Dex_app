@@ -6,7 +6,7 @@ const navigationConfig: NavigationOptions[] = [
       {
         title: "PFTs?",
         href: "https://peledao.app/What-are-PFTs-6b40e1bc68fe4275b0206f95931c6cc0",
-        icon: "LocalAtm",
+        icon: "PFTs",
         purchase: false,
         show: true,
         highlight: true,
@@ -16,7 +16,7 @@ const navigationConfig: NavigationOptions[] = [
       {
         title: "Buy ZIL",
         href: "https://transak.com/",
-        icon: "LocalAtm",
+        icon: "Zil",
         purchase: true,
         show: true,
         highlight: true,
@@ -25,7 +25,7 @@ const navigationConfig: NavigationOptions[] = [
       {
         title: "Get PELE",
         href: "https://transak.com/",
-        icon: "LocalAtm",
+        icon: "GetPele",
         purchase: true,
         show: true,
         highlight: true,
@@ -34,7 +34,7 @@ const navigationConfig: NavigationOptions[] = [
       {
         title: "Community",
         href: "https://discord.gg/CjjG9xMtkX",
-        icon: "Discord",
+        icon: "Community",
         purchase: false,
         show: true,
         highlight: true,
